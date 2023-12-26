@@ -12,25 +12,28 @@ public class DungeonGame {
         int col1 = sc.nextInt();
         
 
-        System.out.println("Enter position of Monster");
-        int row2 = sc.nextInt();
-        int col2 = sc.nextInt();
-
-        System.out.println("Enter position of Triger");
-    int row3 = sc.nextInt();
-     int col3 = sc.nextInt();
-       int adsteps= Math.abs(row-row1)+Math.abs(col-col1);
-     
-    
-        int steps = Math.abs(row1-row3)+Math.abs(col1-col3);
-       int minsteps=Math.abs(row3-row)+Math.abs(col3-col);
-       int monststeps=  Math.abs(row2-row)+Math.abs(col2-col);
-      
-       int shorts=steps+minsteps;
-       if(adsteps<monststeps) 
-       	   System.out.println("Shortest Step Distance Is"+" "+adsteps);
-       else if(monststeps<shorts) {
-    	   System.out.println("Shortest Step Distance Is"+" "+shorts);
-       }
+        System.out.println("enter the bits");  
+        
+        int bits=sc.nextInt();
+        int i=1;
+        int  bitrow = 0;
+        int bitcol=0;;
+        while(bits>0) {
+        	System.out.println("enter bit"+i);
+        	  bitrow = sc.nextInt();
+             bitcol = sc.nextInt();
+             i++;
+             bits--;
+        }
+        int bitses = Math.abs(bitrow-row)+Math.abs(col-col1);
+        System.out.println(bitses);
+       int mindist=Math.abs(row-row1)+Math.abs(col-col1);
+       System.out.println(mindist);
        
+       if(bitses>mindist) {
+    	   System.out.println("imposible");
+       }else
+       System.out.println(mindist);
+    
     }}
+ 
